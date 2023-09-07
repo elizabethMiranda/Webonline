@@ -3,12 +3,18 @@
     padding:10px;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Monserrat', sans-serif;
+}
 .padre{
     display:flex;
     flex-flow: column nowrap;
 }
 .header{
-    background: #000;
+    background: url(../imagenes/bg-2.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -22,20 +28,14 @@
 .logo{
     background:#ea5455 ;
     flex:1 1 auto;
-    height: 30px;
-
 }
 .nav{
     background:#ea5455 ;
     flex:5 1 auto;
-    height: 30px;
-
 }
 .social{
     background:#ea5455 ;
     flex:1 1 auto;
-    height: 30px;
-
 }
 .texto-principal{
     background: #f07b3f;
@@ -77,4 +77,27 @@ h1{
 .pie{
     background: #e6af2e;
     width: 300px;
+}
+/*RESPONSIVE CON MEDIA QUERIES*/
+@media all and (max-width:800px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width:600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+@media all and (max-width:400px){
+    .aside{
+        flex-direction: column;
+    }
 }
